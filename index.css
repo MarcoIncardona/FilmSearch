@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#films img{
+    width: 100px;
+}
+#films{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#films div{
+    width: 150px;
+}
+
