@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,46 +11,101 @@
 <header>
     <div class="header-container">
         <div class="title-container">
-            <h1>MovieSearch</h1>
+            <a href="index.html"><img src="./img/logo.png" width="200px" /></a>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="">MyList</a>
+                <a href="">MyFavorite</a>
+            </div>
         </div>
         <div class="search-input-container">
-            <input type="search" name="" id="input">
-            <button id="button">Cerca</button>
+            <input class="search-input" type="search" name="" id="input" placeholder="Search Movie">
+            <button class="search-button" id="button">Cerca</button>
         </div>
     </div>
 </header>
+
 <body>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
     <div class="films-container" id="homepage-films">
-        <h1>Popular Movies</h1>
-        <div id="Popular-movies" class="movies">
+        <h1 class="film-category">Popular Movies</h1>
+        <div class="carosello-wrap">
+            <div id="Popular-movies" class="movies">
 
+            </div>
+            <button class="prev-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="next-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
         </div>
-        <h1>Now Playing</h1>
-        <div id="Now-playing" class="movies">
 
+        <h1 class="film-category">Now Playing</h1>
+        <div class="carosello-wrap">
+            <div id="Now-playing" class="movies">
+
+            </div>
+            <button class="prev-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="next-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
         </div>
-        <h1>Top Rated</h1>
-        <div id="Top-Rated" class="movies">
 
+        <h1 class="film-category">Top Rated</h1>
+        <div class="carosello-wrap">
+            <div id="Top-Rated" class="movies">
+
+            </div>
+            <button class="prev-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="next-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
         </div>
-        <h1>UpComing</h1>
-        <div id="Up-Coming" class="movies">
+        <h1 class="film-category">UpComing</h1>
+        <div class="carosello-wrap">
+            <div id="Up-Coming" class="movies">
 
+            </div>
+            <button class="prev-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button class="next-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
         </div>
     </div>
 
     <div>
+        <div class="impagination-search" id="button-page">
+            <ul class="button-list" id="button-list">
+
+            </ul>
+        </div>
         <div class="search-film-container" id="search">
-    
+
         </div>
 
-        <div class="impagination-search" id="button-page">
-            <button class="button-page" id="prev-button">PREV</button>
-            <ul class="button-list" id="button-list">
-                
-            </ul>
-            <button class="button-page" id="next-button">NEXT</button>
-        </div>
     </div>
 
     <script type="module" src="PopularMovies.js"></script>
@@ -57,5 +113,7 @@
     <script type="module" src="NowPlayingMovies.js"></script>
     <script type="module" src="TopRatedMovies.js"></script>
     <script type="module" src="UpComingMovies.js"></script>
+    <script type="module" src="Carousel.js"></script>
 </body>
+
 </html>
